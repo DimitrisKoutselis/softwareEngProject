@@ -12,8 +12,6 @@ public class Player {
 	 * @param Team
 	 */
 	public void setTeam(int Team) {
-		// TODO - implement Player.setTeam
-		throw new UnsupportedOperationException();
 	}
 
 }
