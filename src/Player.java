@@ -7,6 +7,14 @@ public class Player {
 	public void getTeam() {
 	}
 
+	public int getPosition() {
+		return position;
+	}
+
+	public String getPlayer_Name() {
+		return player_Name;
+	}
+
 	/**
 	 * 
 	 * @param Team
@@ -14,4 +22,7 @@ public class Player {
 	public void setTeam(int Team) {
 	}
 
+	public void setPosition(int position) {
+		this.position = position;
+	}
 }

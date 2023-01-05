@@ -1,5 +1,9 @@
 public class Admin extends User {
 
+	public Admin(int user_ID, String user_Name) {
+		super(user_ID, user_Name);
+	}
+
 	public void Create_League() {
 	}
 
