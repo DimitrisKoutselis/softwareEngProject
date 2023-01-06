@@ -8,6 +8,13 @@ public abstract class User {
 		this.user_Name = user_Name;
 	}
 
+	public User() {
+
+	}
+
+
+
+
 	public int getUser_ID() {
 		return user_ID;
 	}
