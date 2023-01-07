@@ -33,7 +33,7 @@ public class createTeamForm {
 
                 try {
                     if (!team_Name.equals(null) && !team_City.equals(null) && !team_Points.equals(null)) {
-                        admin.Create_Team(team_Name, team_City, team_Points, team_Icon);
+                        //admin.Create_Team(team_Name, team_City, team_Points, team_Icon);
                         //JOptionPane.showConfirmDialog(this,"Η Δημιουργία Ομάδας Πραγματοποιήθηκε Με Επιτυχία!");
                     } else if (team_Name.equals(null) || !team_City.equals(null) || team_Points.equals(null)) {
                         //JOptionPane.showMessageDialog(this,"Παρακαλώ Συμπληρώστε Τα Πεδία Κατάλληλα");
