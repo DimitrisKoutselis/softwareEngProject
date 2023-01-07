@@ -25,4 +25,7 @@ public class Team {
 		this.points = points;
 	}
 
+	public ImageIcon getEmblem() {
+		return emblem;
+	}
 }

@@ -95,7 +95,7 @@
           <text value="CheckBox"/>
         </properties>
       </component>
-      <component id="7c661" class="javax.swing.JLabel">
+      <component id="7c661" class="javax.swing.JLabel" binding="teamsIconLabel">
         <constraints>
           <grid row="1" column="4" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -105,4 +105,16 @@
       </component>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="teamCheckboxes">
+      <member id="964d0"/>
+      <member id="91097"/>
+      <member id="97470"/>
+      <member id="712df"/>
+      <member id="d46da"/>
+      <member id="ee5fe"/>
+      <member id="8aa52"/>
+      <member id="4b9e4"/>
+    </group>
+  </buttonGroups>
 </form>
