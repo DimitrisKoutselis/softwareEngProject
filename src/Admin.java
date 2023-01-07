@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 
 public class Admin extends User {
@@ -38,7 +37,7 @@ public class Admin extends User {
 
 	public void Create_Team(String teamName, String teamCity, Integer teamPoints, ImageIcon teamLogo) {
 		Team team = new Team();
-		team.teams.add(new Team(teamName,teamCity,teamPoints,teamLogo));
+		team.teamsArrayList.add(new Team(teamName,teamCity,teamPoints,teamLogo));
 
 	}
 

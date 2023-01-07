@@ -9,7 +9,7 @@ public class Team {
 	private Integer points;
 	private ImageIcon emblem;
 
-	public ArrayList<Team> teams = new ArrayList<Team>();
+	public ArrayList<Team> teamsArrayList = new ArrayList<Team>();
 
 
 	public Team() {
