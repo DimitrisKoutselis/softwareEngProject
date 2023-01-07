@@ -1,12 +1,25 @@
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Team {
 
 	private String team_Name;
-	private int points;
+
+	private String team_City;
+	private Integer points;
 	private ImageIcon emblem;
 
-	public Team(String team_name, Integer team_points, ImageIcon team_icon) {
+	public ArrayList<Team> teams = new ArrayList<Team>();
+
+
+	public Team() {
+	}
+
+	public Team(String team_Name, String team_City, Integer points, ImageIcon emblem) {
+		this.team_Name = team_Name;
+		this.team_City = team_City;
+		this.points = points;
+		this.emblem = emblem;
 	}
 
 	public String getTeam_Name() {

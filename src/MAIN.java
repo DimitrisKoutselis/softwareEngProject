@@ -9,8 +9,8 @@ public class MAIN {
         users.add(new Admin(1,"Admin"));
         users.add(new Secretary(2, "Secretary"));
 
-        new RegisterForm();
 
+        new createTeamForm();
 
 
     }
