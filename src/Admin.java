@@ -38,6 +38,7 @@ public class Admin extends User {
 	public void Create_Team(String teamName, String teamCity, Integer teamPoints, ImageIcon teamLogo) {
 		Team team = new Team();
 		team.teamsArrayList.add(new Team(teamName,teamCity,teamPoints,teamLogo));
+		team.teamsArrayList_2.add(new Team(teamName,teamPoints));
 
 	}
 

@@ -26,16 +26,16 @@ public class createTeamForm {
             public void actionPerformed(ActionEvent e) {
                 String team_Name = teamNameTextField.getText().toString();
                 String team_City = teamCityTextField.getText().toString();
-                Integer team_Points = Integer.valueOf(teamPointsTextField.getText());
+                int team_Points = Integer.valueOf(teamPointsTextField.getText());
                 Admin admin = new Admin();
                 ImageIcon team_icon;
 
 
                 try {
-                    if (!team_Name.equals(null) && !team_City.equals(null) && !team_Points.equals(null)) {
+                    if (!team_Name.equals(null) && !team_City.equals(null)) {
                         //admin.Create_Team(team_Name, team_City, team_Points, team_Icon);
                         //JOptionPane.showConfirmDialog(this,"Η Δημιουργία Ομάδας Πραγματοποιήθηκε Με Επιτυχία!");
-                    } else if (team_Name.equals(null) || !team_City.equals(null) || team_Points.equals(null)) {
+                    } else if (team_Name.equals(null) || !team_City.equals(null)) {
                         //JOptionPane.showMessageDialog(this,"Παρακαλώ Συμπληρώστε Τα Πεδία Κατάλληλα");
                         //katharismos olwn twn textfields
                     }

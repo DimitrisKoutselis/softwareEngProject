@@ -1,6 +1,9 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class League {
+
+
+public class League   {
 
 	private String Name;
 	private int Ranking;
@@ -9,6 +12,19 @@ public class League {
 
 	public void draw(Admin currentUser) {
 		matchdays = currentUser.Create_League(teams);
+	}
+
+
+	public void Ranking(Admin currentUser){
+		Team leagueTeams = new Team();
+		ArrayList<Team> teams = leagueTeams.teamsArrayList_2;
+		Collections.sort(teams,new teamComparator());
+	}
+
+	public void Ranking(Supporter currentUser){
+		Team leagueTeams = new Team();
+		ArrayList<Team> teams = leagueTeams.teamsArrayList_2;
+		Collections.sort(teams,new teamComparator());
 	}
 
 	public String getName() {

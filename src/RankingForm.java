@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class RankingForm {
     private JComboBox comboBox1;
@@ -7,4 +9,13 @@ public class RankingForm {
     private JTable table1;
 
 
+    public RankingForm() {
+        showTeamsAndPointsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+            }
+        });
+    }
 }
