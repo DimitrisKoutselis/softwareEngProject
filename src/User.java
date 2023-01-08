@@ -12,7 +12,13 @@ public abstract class User {
 
 	}
 
-
+	public void getCurrentUser(User user){
+		if(User.class.equals(Admin.class)){
+			user = new Admin();
+		} else if (User.class.equals(Supporter.class)) {
+			user = new Supporter();
+		}
+	}
 
 
 	public int getUser_ID() {

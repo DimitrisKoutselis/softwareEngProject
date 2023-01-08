@@ -5,6 +5,13 @@ public class Match {
 	private int pointers3;
 	private int scoreAway;
 	private String finalScore;
+	private Team homeTeam;
+	private Team awayTeam;
+
+	public Match(Team home, Team away){
+		this.homeTeam = home;
+		this.awayTeam = away;
+	}
 
 	public int getScoreAway() {
 		return this.scoreAway;

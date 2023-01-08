@@ -3,32 +3,43 @@ import java.util.ArrayList;
 
 public class Admin extends User {
 
-	//private Team team;
-	public ArrayList<Team> teamsArrayList = new ArrayList<Team>();
+
 
 	public Admin(int user_ID, String user_Name) {
 		super(user_ID, user_Name);
 	}
 
-	public void Create_League() {
+	public Admin() {
+
 	}
 
-	public void Create_Team() {
-		String team_Name = null; //antistixisi me text field
-		Integer team_Points = 0; // antistixisi me text field
-		ImageIcon team_icon = null; // antistixisi me katallhlo icon
-		try {
-			if (!team_Name.equals(null) && !team_Points.equals(null) && !team_icon.equals(null)) {
-				Team newTeam = new Team(team_Name, team_Points, team_icon);
-				teamsArrayList.add(newTeam);
-				//JOptionPane.showConfirmDialog(this,"Η Δημιουργία Ομάδας Πραγματοποιήθηκε Με Επιτυχία!");
-			} else if (team_Name.equals(null) || team_Points.equals(null) || team_icon.equals(null)) {
-				//JOptionPane.showMessageDialog(this,"Παρακαλώ Συμπληρώστε Τα Πεδία Κατάλληλα");
-				//katharismos olwn twn textfields
-			}
-		}catch (RuntimeException ex){
-			//JOptionPane.showMessageDialog(this, "Σφάλμα:" + " " +ex.getMessage().toString());
+	public ArrayList<Matchday> Create_League(ArrayList<Team> teams) {
+		//Arxikopoihsh twn ArraList
+		ArrayList<Matchday> leagueMatchdays = new ArrayList<Matchday>();
+		ArrayList<Match> matches = new ArrayList<Match>();
+		//Prwth Agwnistikh symfwna me algoritho RoundRobin
+		for(int j = 0; j < teams.size()/2; j++){
+			matches.add(new Match(teams.get(0+j), teams.get(teams.size()-1 - j)));
 		}
+		leagueMatchdays.add(new Matchday(0, matches));
+		//Ypoloipes Agwnistikes symfwna me algorithmo RoundRobin
+		for (int i = 1; i < teams.size(); i++){
+
+		}
+
+
+
+
+
+
+		return leagueMatchdays;
+	}
+
+	public void Create_Team(String teamName, String teamCity, Integer teamPoints, ImageIcon teamLogo) {
+		Team team = new Team();
+		team.teamsArrayList.add(new Team(teamName,teamCity,teamPoints,teamLogo));
+		team.teamsArrayList_2.add(new Team(teamName,teamPoints));
+
 	}
 
 	public void Create_Player() {
