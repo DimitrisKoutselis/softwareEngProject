@@ -57,7 +57,9 @@
         <children>
           <component id="c0cc8" class="javax.swing.JTable" binding="HomeSquad" custom-create="true">
             <constraints/>
-            <properties/>
+            <properties>
+              <autoCreateRowSorter value="true"/>
+            </properties>
           </component>
         </children>
       </scrollpane>
