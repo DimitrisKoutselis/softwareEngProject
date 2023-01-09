@@ -17,13 +17,20 @@ public class Admin extends User {
 		//Arxikopoihsh twn ArraList
 		ArrayList<Matchday> leagueMatchdays = new ArrayList<Matchday>();
 		ArrayList<Match> matches = new ArrayList<Match>();
+		int[][] indexes =  new int [2][teams.size()/2];
 		//Prwth Agwnistikh symfwna me algoritho RoundRobin
 		for(int j = 0; j < teams.size()/2; j++){
-			matches.add(new Match(teams.get(0+j), teams.get(teams.size()-1 - j)));
+			indexes[0][j] = 0+j;
+			indexes[1][j] = teams.size()-1-j;
+			matches.add(new Match(teams.get(indexes[0][j]), teams.get(indexes[1][j])));
 		}
 		leagueMatchdays.add(new Matchday(0, matches));
 		//Ypoloipes Agwnistikes symfwna me algorithmo RoundRobin
-		for (int i = 1; i < teams.size(); i++){
+		for (int i = 1; i < teams.size()-1; i++){
+			indexes = clockwiseArrayForRoundRobinTournament(indexes);
+			for (int j = 0; j < teams.size()/2; j++){
+				matches.add(new Match(teams.get(indexes[0][j]), teams.get(indexes[1][j])));
+			}
 
 		}
 
@@ -33,6 +40,20 @@ public class Admin extends User {
 
 
 		return leagueMatchdays;
+	}
+
+	public int[][] clockwiseArrayForRoundRobinTournament(int[][] indexes){
+		int[][] indexes2 = new int[2][indexes[0].length];
+		indexes2[0][0] = indexes[0][0];
+		indexes2[0][1] = indexes[1][0];
+		for (int i = 2; i < indexes[0].length;i++){
+			indexes2[0][i] = indexes[0][i-1];
+		}
+		for (int i = 0; i < indexes[0].length-1; i++){
+			indexes2[1][i] = indexes[1][i+1];
+		}
+		indexes2[1][indexes[0].length-1] = indexes[0][indexes[0].length-1];
+		return indexes2;
 	}
 
 	public void Create_Team(String teamName, String teamCity, Integer teamPoints, ImageIcon teamLogo) {
