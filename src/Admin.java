@@ -26,6 +26,17 @@ public class Admin extends User {
 		}
 		leagueMatchdays.add(new Matchday(0, matches));
 		//Ypoloipes Agwnistikes symfwna me algorithmo RoundRobin
+		/*
+			Symfwna me ton Algorithmo RoundRobin ean ka8e arithmos anaparista mia omada:
+
+			Prwth agwnistikh, tyxaia apofash poia omada animetwpizei poia :
+			1 2 3 4 vs
+			8 7 6 5
+
+			Deyterh agwnistikh kai epeita, oloi allazoyn 8esh me th fora tou rologiou ektos tou prwtou:
+			1 8 2 3 vs   1 7 8 2 vs      1 6 7 8 vs    1 5 6 7 vs     k.o.k.
+			7 6 5 4      6 5 4 3         5 4 3 2       4 3 2 8
+		 */
 		for (int i = 1; i < teams.size()-1; i++){
 			indexes = clockwiseArrayForRoundRobinTournament(indexes);
 			for (int j = 0; j < teams.size()/2; j++){
@@ -33,12 +44,6 @@ public class Admin extends User {
 			}
 
 		}
-
-
-
-
-
-
 		return leagueMatchdays;
 	}
 
